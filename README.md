@@ -20,7 +20,7 @@ The project is built using the following stack:
 - **Axios**: Promise-based HTTP client for API interactions.
 - **React-Query**: Data-fetching and state management for server-state in React.
 - **Vitest**: Unit testing framework.
-- **Husky**: Git hooks for testing.
+- **Husky**: Git hooks for run test before commit.
 
 ## Installation
 
@@ -52,7 +52,7 @@ The project is built using the following stack:
    To run the unit tests, execute:
 
    ```bash
-   npm run test
+   npm run test:dev
    ```
 
 ## Author
