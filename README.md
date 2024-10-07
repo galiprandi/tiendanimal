@@ -1,50 +1,62 @@
-# React + TypeScript + Vite
+# TODO CRUD Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple TODO application that uses the latest technologies and best practices.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- View a list of TODOs from the REST API.
+- Add new TODOs.
+- Delete existing TODOs.
+- Pagination for better task management.
+- Error handling and form validation.
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The project is built using the following stack:
 
-- Configure the top-level `parserOptions` property like this:
+- **Vite**: Fast build tool for frontend development.
+- **React**: Component-based JavaScript library for building user interfaces.
+- **TypeScript**: Typed superset of JavaScript for better tooling and type safety.
+- **Axios**: Promise-based HTTP client for API interactions.
+- **React-Query**: Data-fetching and state management for server-state in React.
+- **Vitest**: Unit testing framework.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Clone the repository:**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```bash
+   git clone git@github.com:galiprandi/tiendanimal.git
+   cd tiendanimal
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. **Install dependencies:**
+
+   Make sure you have [Node.js](https://nodejs.org/) installed, then run:
+
+   ```bash
+   npm i
+   ```
+
+3. **Run the application:**
+
+   Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Run tests:**
+
+   To run the unit tests, execute:
+
+   ```bash
+   npm run test
+   ```
+
+## Author
+
+- **Germán Aliprandi**
+  - LinkedIn: [linkedin.com/in/galiprandi](https://www.linkedin.com/in/galiprandi)
+  - GitHub: [github.com/galiprandi](https://github.com/galiprandi)
+  - Email: galiprandi@gmail.com
