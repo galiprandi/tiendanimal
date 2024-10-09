@@ -2,6 +2,10 @@
 
 A simple TODO application that uses the latest technologies and best practices.
 
+## Demo
+
+Check out the live demo: [galiprandi.github.io/tiendanimal/](https://galiprandi.github.io/tiendanimal/)
+
 ## Features
 
 - View a list of TODOs from the REST API.
