@@ -1,0 +1,27 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: 1em;
+
+    & .title {
+        color: var(--color-neutral-80);
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0 0 .2em 0;
+    }
+
+    & .description {
+        color: var(--color-neutral-40);
+        font-size: 12px;
+    }
+}
+
+.card+.card {
+    margin-top: 1em;
+}
