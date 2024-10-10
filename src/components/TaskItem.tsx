@@ -1,6 +1,6 @@
 import { TodoDTO } from '../apis/todos.apis'
 import styles from './TaskItem.module.css'
-import { TrashIcon } from './icons/trash.icon'
+import { TrashIcon } from './icons/Trash.icon'
 
 export const TaskItem = ({ title, onDelete }: Props) => {
   return (

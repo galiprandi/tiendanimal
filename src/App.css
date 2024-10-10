@@ -29,6 +29,8 @@ body {
 }
 
 button.icon {
+    display: grid;
+    place-items: center;
     border: 0;
     background: 0;
     color: var(--color-neutral-20);
@@ -40,8 +42,15 @@ button.icon {
     }
 }
 
+button.icon.accent {
+    color: var(--color-neutral-50);
+
+    &:hover {
+        color: var(--color-accent);
+    }
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
-    padding: 1em;
 }

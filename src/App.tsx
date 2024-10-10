@@ -2,6 +2,8 @@ import './App.css'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { MyTaskList } from './components/MyTaskList'
+import { Header } from './components/Header'
+import { NavBar } from './components/NavBar'
 
 function App() {
   const queryClient = new QueryClient({
@@ -16,11 +18,10 @@ function App() {
     <>
       <QueryClientProvider client={queryClient}>
         <main className="container">
-          <h1>Tiendanimal</h1>
-
+          <Header />
+          <NavBar />
           <MyTaskList />
         </main>
-
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </>
