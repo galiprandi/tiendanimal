@@ -17,8 +17,6 @@ export const ToggleLanguage = () => {
     i18n.changeLanguage(lang)
   }, [lang])
 
-  console.log({ i18n })
-
   return (
     <button className="icon" onClick={toggleLang}>
       {availableLangs[lang]}
