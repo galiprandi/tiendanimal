@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useTodos } from '../hooks/useTodos'
-import { TaskItem } from './TaskItem'
+import { TaskItem } from '../components/TaskItem'
 
 export const MyTaskList = () => {
   const { t } = useTranslation('translations')

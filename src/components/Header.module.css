@@ -5,6 +5,7 @@
     text-align: center;
     padding: 18px;
     border-bottom: .5px solid var(--color-neutral-20);
+    background-color: white;
 }
 
 .left,
