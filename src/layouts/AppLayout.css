@@ -4,6 +4,7 @@
 :root {
     --app-font: "Open Sans", sans-serif;
 
+    --color-neutral-10: #C9C9C9;
     --color-neutral-20: #B3B3B3;
     --color-neutral-40: #777777;
     --color-neutral-50: #555555;
@@ -28,7 +29,13 @@ body {
     color: var(--color-neutral-50);
 }
 
-button.action {
+button:disabled,
+input[type="submit"]:disabled {
+    opacity: .4;
+}
+
+button.action,
+input[type="submit"].action {
     background-color: var(--color-accent);
     color: white;
     width: 100%;
@@ -84,4 +91,39 @@ a.active::after {
     height: 4px;
     background-color: #4caf50;
     border-radius: 4px 4px 0 0;
+}
+
+.card {
+    background-color: white;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: 1em;
+}
+
+/* Forms */
+
+/* invalid form */
+form:invalid input[type="submit"] {
+    opacity: .4;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: .4em;
+
+    &>input {
+        border: 1px solid var(--color-neutral-10);
+        padding: .8em 1em;
+    }
+}
+
+label+label {
+    margin-top: 1em;
+}
+
+span.required::after {
+    color: #a55b4e;
+    content: '*';
+    margin-left: .5em;
 }

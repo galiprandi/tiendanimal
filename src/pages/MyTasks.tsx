@@ -2,10 +2,13 @@ import { useTranslation } from 'react-i18next'
 import { useTodos } from '../hooks/useTodos'
 import { TaskItem } from '../components/TaskItem'
 import { AddTask } from '../components/AddTask'
+import { useDeleteTodos } from '../hooks/useDeleteTodos'
 
 export const MyTaskList = () => {
+  const { mutate } = useDeleteTodos()
+
   const { t } = useTranslation('translations')
-  const { firstThreeTodos, status } = useTodos()
+  const { todos, status } = useTodos()
   return (
     <>
       <section>
@@ -17,9 +20,10 @@ export const MyTaskList = () => {
           <p>{t('Error trying to fetch the tasks')}</p>
         ) : null}
 
-        {firstThreeTodos?.map(task => (
-          <TaskItem {...task} key={task.id} />
+        {todos?.map(task => (
+          <TaskItem {...task} key={task.id} onDelete={() => mutate(task.id)} />
         ))}
+        <br />
         <br />
         <AddTask />
       </section>

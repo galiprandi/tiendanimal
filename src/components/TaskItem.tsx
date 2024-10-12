@@ -1,10 +1,10 @@
-import { TodoDTO } from '../apis/todos.apis'
+import { TodoDTO } from '../apis/api'
 import styles from './TaskItem.module.css'
 import { TrashIcon } from './icons/Trash.icon'
 
 export const TaskItem = ({ title, onDelete }: Props) => {
   return (
-    <article className={styles.card}>
+    <article className={`${styles.card} card`}>
       <div className={styles.content}>
         <div className={styles.title}>{title}</div>
         <div className={styles.description}>

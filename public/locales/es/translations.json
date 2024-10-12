@@ -1,7 +1,10 @@
 {
+    "Add task": "Añadir tarea",
     "My best friends": "Mis mejores amigos",
     "My communications": "Mis comunicaciones",
     "My data": "Mis datos",
     "My feedback": "Mis devoluciones",
-    "My tasks": "Mis tareas"
+    "My tasks": "Mis tareas",
+    "Name": "Nombre",
+    "Save": "Guardar"
 }
