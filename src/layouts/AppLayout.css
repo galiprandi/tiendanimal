@@ -81,6 +81,10 @@ button.icon.accent {
     padding: 1em;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 a.active::after {
     position: absolute;
