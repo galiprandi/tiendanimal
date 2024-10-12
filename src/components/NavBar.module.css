@@ -9,7 +9,7 @@
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 1.5em;
+    gap: 2em;
     font-weight: bold;
     width: max-content;
 }
