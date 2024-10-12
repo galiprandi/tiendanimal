@@ -4,7 +4,7 @@ import { TaskItem } from '../components/TaskItem'
 import { AddTask } from '../components/AddTask'
 import { useDeleteTodos } from '../hooks/useDeleteTodos'
 
-export const MyTaskList = () => {
+export const MyTasks = () => {
   const { mutate } = useDeleteTodos()
 
   const { t } = useTranslation('translations')

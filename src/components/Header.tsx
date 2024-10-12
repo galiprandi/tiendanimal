@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Logo from '../assets/tiendanimal_logo.png'
 import styles from './Header.module.css'
 import { CartIcon } from './icons/Cart.icon'
@@ -19,7 +20,9 @@ export const Header = () => {
           </button>
         </div>
         <div className="logo">
-          <img src={Logo} alt="Tiendanimal" />
+          <Link to="/tiendanimal/tasks">
+            <img src={Logo} alt="Tiendanimal" />
+          </Link>
         </div>
         <div className={styles.right}>
           <button className="icon accent">

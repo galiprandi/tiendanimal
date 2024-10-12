@@ -2,11 +2,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { AppLayout } from '../layouts/AppLayout'
 
 // Pages
-import { MyTaskList } from '../pages/MyTasks'
+import { MyTasks } from '../pages/MyTasks'
 import { MyData } from '../pages/MyData'
 import { MyFeedback } from '../pages/MyFeedback'
 import { MyCommunications } from '../pages/MyCommunications'
 import { MyBestFriends } from '../pages/MyBestFriends'
+import { Home } from '../pages/Home'
 
 const router = createBrowserRouter([
   {
@@ -14,12 +15,17 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       {
+        index: true,
+        element: <Home />,
+      },
+      {
         path: 'data',
         element: <MyData />,
       },
       {
+        index: true,
         path: 'tasks',
-        element: <MyTaskList />,
+        element: <MyTasks />,
       },
       {
         path: 'feedback',
