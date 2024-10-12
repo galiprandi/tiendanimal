@@ -6,8 +6,11 @@ export const useTodos = () => {
 
   const { data: todos, ...rest } = useQuery({ queryKey, queryFn })
 
+  const firstThreeTodos = todos?.slice(0, 3)
+
   return {
     todos,
+    firstThreeTodos,
     ...rest,
   }
 }

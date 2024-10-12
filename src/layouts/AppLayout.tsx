@@ -1,10 +1,10 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Header } from '../components/Header'
-import { NavBar } from '../components/NavBar'
 import { Outlet } from 'react-router-dom'
 
 import './AppLayout.css'
+import { Footer } from '../components/Footer'
 
 export const AppLayout = () => {
   const queryClient = new QueryClient({
@@ -17,11 +17,13 @@ export const AppLayout = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <main className="container">
+      <div className="container">
         <Header />
-        <NavBar />
-        <Outlet />
-      </main>
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   )

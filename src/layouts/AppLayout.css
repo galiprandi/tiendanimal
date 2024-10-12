@@ -28,6 +28,16 @@ body {
     color: var(--color-neutral-50);
 }
 
+button.action {
+    background-color: var(--color-accent);
+    color: white;
+    width: 100%;
+    border: 0;
+    padding: 12px;
+    border-radius: var(--radius);
+    font-size: 16px;
+}
+
 button.icon {
     display: grid;
     place-items: center;
@@ -51,14 +61,19 @@ button.icon.accent {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     max-width: 414px;
     margin: 0 auto;
-}
-
-.container>section {
-    padding: 1em;
+    height: 100vh;
     background-color: var(--color-bg);
 }
+
+.container>main {
+    flex-grow: 2;
+    padding: 1em;
+}
+
 
 a.active::after {
     position: absolute;
