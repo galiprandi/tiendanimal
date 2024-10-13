@@ -20,9 +20,10 @@ The project is built using the following stack:
 
 - **Vite**: Fast build tool for frontend development.
 - **React**: Component-based JavaScript library for building user interfaces.
+- **i18next**: Internationalization framework for React. (EN/ES supported).
 - **TypeScript**: Typed superset of JavaScript for better tooling and type safety.
 - **Axios**: Promise-based HTTP client for API interactions.
-- **React-Query**: Data-fetching and state management for server-state in React.
+- **TanStack Query**: Data-fetching and state management for server-state in React.
 - **Vitest**: Unit testing framework.
 - **Husky**: Git hooks for run test before commit.
 
