@@ -3,7 +3,6 @@ import { render } from '@testing-library/react'
 import { NavBar } from './NavBar'
 import { BrowserRouter } from 'react-router-dom'
 
-// Mock de react-i18next
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (str: string) => str,
@@ -13,7 +12,6 @@ vi.mock('react-i18next', () => ({
   }),
 }))
 
-// Mock de react-router-dom
 vi.mock('react-router-dom', async () => {
   const actual = await vi.importActual('react-router-dom')
   return {

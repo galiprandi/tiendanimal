@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom'
-import Logo from '../assets/tiendanimal_logo.png'
 import styles from './Header.module.css'
 import { CartIcon } from './icons/Cart.icon'
 import { MenuIcon } from './icons/Menu.icon'
 import { SearchIcon } from './icons/Search.icon'
 import { UserIcon } from './icons/User.icon'
+import { Logo } from './Logo'
 import { NavBar } from './NavBar'
 
 export const Header = () => {
@@ -19,11 +18,7 @@ export const Header = () => {
             <SearchIcon />
           </button>
         </div>
-        <div className="logo">
-          <Link to="/tiendanimal/tasks">
-            <img src={Logo} alt="Tiendanimal" />
-          </Link>
-        </div>
+        <Logo />
         <div className={styles.right}>
           <button className="icon accent">
             <UserIcon />
