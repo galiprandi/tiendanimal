@@ -8,7 +8,6 @@ import { MyFeedback } from '../pages/MyFeedback'
 import { MyCommunications } from '../pages/MyCommunications'
 import { MyBestFriends } from '../pages/MyBestFriends'
 import { Home } from '../pages/Home'
-import { EditTask } from '../components/EditTask'
 
 const router = createBrowserRouter([
   {
@@ -26,10 +25,6 @@ const router = createBrowserRouter([
       {
         path: 'tasks',
         element: <MyTasks />,
-      },
-      {
-        path: 'tasks/:id',
-        element: <EditTask />,
       },
       {
         path: 'feedback',
