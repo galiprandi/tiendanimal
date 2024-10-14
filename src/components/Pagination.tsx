@@ -24,7 +24,6 @@ export const Pagination = ({ totalPages, page, onPageChange }: Props) => {
       pages.push(totalPages)
     }
 
-    console.log(pages)
     return pages
   }
 
