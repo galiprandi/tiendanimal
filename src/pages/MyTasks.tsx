@@ -11,11 +11,10 @@ import { Pagination } from '../components/Pagination'
 export const MyTasks = () => {
   const { mutate } = useDeleteTask()
   const { t } = useTranslation('translations')
-  const [page, setPage] = useState(1)
+  const [currentPage, setCurrentPage] = useState(1)
   const [editTask, setEditTask] = useState<TaskDTO | null>(null)
 
   const { status, getPage, lastPage } = useTasks()
-
   return (
     <>
       <section>
@@ -26,7 +25,7 @@ export const MyTasks = () => {
           <p>{t('Error trying to fetch the tasks')}</p>
         ) : null}
 
-        {getPage(page)?.map((task, idx) => (
+        {getPage(currentPage)?.map((task, idx) => (
           <TaskItem
             {...task}
             key={task.id + idx}
@@ -38,9 +37,9 @@ export const MyTasks = () => {
         <br />
         <br />
         <Pagination
-          page={page}
+          page={currentPage}
           totalPages={lastPage}
-          onPageChange={page => setPage(page)}
+          onPageChange={page => setCurrentPage(page)}
         />
         <br />
         <br />
