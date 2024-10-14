@@ -13,7 +13,7 @@ i18n
   .use(initReactI18next)
   .use(Backend)
   .init({
-    fallbackLng: 'en',
+    fallbackLng: 'es',
     supportedLngs: ['en', 'es'],
     backend: {
       loadPath: '/tiendanimal/locales/{{lng}}/{{ns}}.json',
