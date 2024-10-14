@@ -1,12 +1,16 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, fireEvent } from '@testing-library/react'
-import { ToggleLanguage } from './ToggleLanguage'
 import i18n from '../libs/i18n'
+import { ToggleLanguage } from './ToggleLanguage'
 
 vi.mock('../libs/i18n', () => ({
   default: {
     language: 'en',
     changeLanguage: vi.fn(),
+  },
+  availableLangs: {
+    en: '🇺🇸',
+    es: '🇪🇸',
   },
 }))
 
