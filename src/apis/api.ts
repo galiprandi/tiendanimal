@@ -11,7 +11,7 @@ export const Api = Axios.create({
  * This is a fake API, it's using the JSONPlaceholder API to simulate a real API.
  */
 export const defaultNewTask = {
-  id: 999,
+  id: 201,
   userId: 1,
   title: 'New task',
   completed: false,
