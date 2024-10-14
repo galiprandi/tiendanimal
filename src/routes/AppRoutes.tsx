@@ -8,6 +8,7 @@ import { MyFeedback } from '../pages/MyFeedback'
 import { MyCommunications } from '../pages/MyCommunications'
 import { MyBestFriends } from '../pages/MyBestFriends'
 import { Home } from '../pages/Home'
+import { AddEditTasks } from '../pages/AddEditTasks'
 
 const router = createBrowserRouter([
   {
@@ -23,9 +24,12 @@ const router = createBrowserRouter([
         element: <MyData />,
       },
       {
-        index: true,
         path: 'tasks',
         element: <MyTasks />,
+      },
+      {
+        path: 'tasks/:id',
+        element: <AddEditTasks />,
       },
       {
         path: 'feedback',

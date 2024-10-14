@@ -1,10 +1,5 @@
 import { useEffect, useState } from 'react'
-import i18n from '../libs/i18n'
-
-const availableLangs = {
-  en: '🇺🇸',
-  es: '🇪🇸',
-}
+import i18n, { availableLangs } from '../libs/i18n'
 
 export const ToggleLanguage = () => {
   const [lang, setLang] = useState<AvailableLangs>(
