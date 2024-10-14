@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 18px;
+    padding: 18px 0;
     border-bottom: .5px solid var(--color-neutral-20);
     background-color: white;
 }
@@ -12,5 +12,5 @@
 .right {
     display: flex;
     align-items: center;
-    gap: .4em;
+
 }
