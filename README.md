@@ -10,25 +10,29 @@ Check out the live demo: <a href="https://galiprandi.github.io/tiendanimal" targ
 
 ## Features
 
-- View a list of TODOs from the REST API.
-- Optimistic updates for better user experience when creating or deleting a TODO.
-- Add new TODOs with optimistic updates.
-- Delete existing TODOs with optimistic updates.
-- Error handling and form validation.
-- Toast notifications on error messages.
+- 📄 **Paginated TODO List**: View a list of TODOs fetched from the REST API.
+- ⚡ **Optimistic Updates**: Enhance user experience with immediate UI updates when creating or deleting TODOs.
+- ➕ **Add TODOs**: Seamlessly add new TODOs with optimistic updates.
+- ❌ **Delete TODOs**: Effortlessly delete existing TODOs with optimistic updates.
+- 🚫 **Error Handling**: Robust error handling and form validation.
+- 🌐 **Internationalization**: Support for multiple languages (EN/ES).
+- 🧪 **Unit Testing**: Comprehensive unit tests for components and hooks.
+- 🛠️ **Git Hooks**: Automated tests run before each commit.
+- 🔔 **Notifications**: Toast notifications for error messages.
 
-## Stack
+## Tech Stack
 
-The project is built using the following stack:
+This project leverages the following technologies:
 
-- **Vite**: Fast build tool for frontend development.
-- **React**: Component-based JavaScript library for building user interfaces.
-- **i18next**: Internationalization framework for React. (EN/ES supported).
-- **TypeScript**: Typed superset of JavaScript for better tooling and type safety.
-- **Axios**: Promise-based HTTP client for API interactions.
-- **TanStack Query**: Data-fetching and state management for server-state in React.
-- **Vitest**: Unit testing framework.
-- **Husky**: Git hooks for run test before commit.
+- **Vite**: A fast build tool for modern web development.
+- **React**: A JavaScript library for building user interfaces with components.
+- **i18next**: An internationalization framework for React, supporting multiple languages (EN/ES).
+- **TypeScript**: A typed superset of JavaScript that enhances tooling and type safety.
+- **Axios**: A promise-based HTTP client for making API requests.
+- **TanStack Query**: A powerful data-fetching and state management library for server-state in React.
+- **Vitest**: A unit testing framework designed for speed and simplicity.
+- **Husky**: A tool for managing Git hooks to ensure tests run before commits.
+- **Best Practices**: Follows best practices for React development, including hooks, functional components, and more.
 
 ## Installation
 
