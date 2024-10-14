@@ -21,7 +21,6 @@ export const useTasks = (query?: string) => {
     },
   })
 
-  // Filter tasks by partial query title
   const filtered = query
     ? tasks?.filter(task =>
         task.title.toLowerCase().includes(query.toLowerCase())
