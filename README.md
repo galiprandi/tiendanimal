@@ -4,7 +4,9 @@ A simple TODO application that uses the latest technologies and best practices.
 
 ## Demo
 
-Check out the live demo: [galiprandi.github.io/tiendanimal/](https://galiprandi.github.io/tiendanimal/)
+Check out the live demo: [galiprandi.github.io/tiendanimal](https://galiprandi.github.io/tiendanimal)
+
+![screenshot](./public/screenshot.png)
 
 ## Features
 
