@@ -1,3 +1,4 @@
+import { useTasks } from '../hooks/useTasks'
 import styles from './Header.module.css'
 import { CartIcon } from './icons/Cart.icon'
 import { MenuIcon } from './icons/Menu.icon'
@@ -7,6 +8,8 @@ import { Logo } from './Logo'
 import { NavBar } from './NavBar'
 
 export const Header = () => {
+  const { tasks } = useTasks()
+
   return (
     <>
       <header className={styles.header}>
@@ -24,7 +27,7 @@ export const Header = () => {
             <UserIcon />
           </button>
           <button className="icon accent">
-            <CartIcon items={2} />
+            <CartIcon items={tasks?.length} />
           </button>
         </div>
       </header>

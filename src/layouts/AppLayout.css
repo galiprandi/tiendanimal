@@ -34,15 +34,28 @@ input[type="submit"]:disabled {
     opacity: .4;
 }
 
-button.action,
-input[type="submit"].action {
-    background-color: var(--color-accent);
-    color: white;
+button,
+input[type="submit"] {
     width: 100%;
     border: 0;
     padding: 12px;
     border-radius: var(--radius);
     font-size: 16px;
+}
+
+button.action,
+input[type="submit"].action {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+button.white {
+    background-color: white;
+    color: var(--color-neutral-20);
+
+    &:hover {
+        color: var(--color-neutral-60);
+    }
 }
 
 button.icon {
@@ -106,7 +119,6 @@ a.active::after {
 
 /* Forms */
 
-/* invalid form */
 form:invalid input[type="submit"] {
     opacity: .4;
 }
@@ -116,9 +128,15 @@ label {
     flex-direction: column;
     gap: .4em;
 
-    &>input {
+    &>input,
+    &>textarea {
         border: 1px solid var(--color-neutral-10);
         padding: .8em 1em;
+        border-radius: var(--radius);
+    }
+
+    &>textarea {
+        min-height: 11.7em;
     }
 }
 
@@ -130,4 +148,35 @@ span.required::after {
     color: #a55b4e;
     content: '*';
     margin-left: .5em;
+}
+
+dialog {
+    position: relative;
+    border: 0;
+    border-radius: var(--radius);
+    min-width: 40ch;
+    color: inherit;
+    box-shadow: var(--shadow);
+
+    &::backdrop {
+        background-color: rgba(44, 44, 44, 0.76);
+    }
+
+    & .modal-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: .5em;
+        width: auto;
+    }
+
+    & h2 {
+        margin: .5em 0;
+    }
+}
+
+/* Helpers */
+.buttons {
+    display: flex;
+    gap: 1em;
 }

@@ -50,9 +50,9 @@ export const CartIcon = ({
           </clipPath>
         </defs>
       </svg>
-      {items && (
+      {items ? (
         <span className={styles.items}>{items < 10 ? items : '+'}</span>
-      )}
+      ) : null}
     </>
   )
 }

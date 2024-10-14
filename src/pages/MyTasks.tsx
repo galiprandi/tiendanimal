@@ -1,14 +1,19 @@
 import { useTranslation } from 'react-i18next'
-import { useTodos } from '../hooks/useTodos'
+import { useTasks } from '../hooks/useTasks'
 import { TaskItem } from '../components/TaskItem'
 import { AddTask } from '../components/AddTask'
-import { useDeleteTodos } from '../hooks/useDeleteTodos'
+import { useDeleteTask } from '../hooks/useDeleteTask'
+import { EditTask } from '../components/EditTask'
+import { TaskDTO } from '../apis/api'
+import { useState } from 'react'
 
 export const MyTasks = () => {
-  const { mutate } = useDeleteTodos()
-
+  const { mutate } = useDeleteTask()
   const { t } = useTranslation('translations')
-  const { todos, status } = useTodos()
+  const [editTask, setEditTask] = useState<TaskDTO | null>(null)
+
+  const { tasks, status } = useTasks()
+
   return (
     <>
       <section>
@@ -20,13 +25,19 @@ export const MyTasks = () => {
           <p>{t('Error trying to fetch the tasks')}</p>
         ) : null}
 
-        {todos?.map(task => (
-          <TaskItem {...task} key={task.id} onDelete={() => mutate(task.id)} />
+        {tasks?.map((task, idx) => (
+          <TaskItem
+            {...task}
+            key={task.id + idx}
+            onDelete={() => mutate(task.id)}
+            onEdit={() => setEditTask(task)}
+          />
         ))}
         <br />
         <br />
-        <AddTask />
+        <AddTask onAdd={newTask => setEditTask(newTask)} />
       </section>
+      <EditTask todo={editTask} onCanceled={() => setEditTask(null)} />
     </>
   )
 }

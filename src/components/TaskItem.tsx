@@ -1,19 +1,19 @@
-import { Link } from 'react-router-dom'
-import { TodoDTO } from '../apis/api'
+import { TaskDTO } from '../apis/api'
 import styles from './TaskItem.module.css'
 import { TrashIcon } from './icons/Trash.icon'
 
-export const TaskItem = ({ id, title, onDelete }: Props) => {
+const DESC_LENGTH = 100
+
+export const TaskItem = ({ title, description, onEdit, onDelete }: Props) => {
+  const limitedDescription =
+    description.length > DESC_LENGTH
+      ? `${description.slice(0, DESC_LENGTH)}...`
+      : description
   return (
     <article className={`${styles.card} card`}>
-      <div className={styles.content}>
-        <Link to={`${id}`}>
-          <div className={styles.title}>{title}</div>
-          <div className={styles.description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris, ac
-            elementum ultrices mauris. Cursus urna
-          </div>
-        </Link>
+      <div className={styles.content} onClick={onEdit}>
+        <div className={styles.title}>{title}</div>
+        <div className={styles.description}>{limitedDescription}</div>
       </div>
       <aside>
         <button onClick={onDelete} className="icon">
@@ -24,6 +24,7 @@ export const TaskItem = ({ id, title, onDelete }: Props) => {
   )
 }
 
-export interface Props extends TodoDTO {
-  onDelete?: () => void
+export interface Props extends TaskDTO {
+  onDelete: () => void
+  onEdit: () => void
 }

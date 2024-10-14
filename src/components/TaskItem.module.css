@@ -17,6 +17,10 @@
     }
 }
 
+.content {
+    cursor: pointer;
+}
+
 .card+.card {
     margin-top: 1em;
 }
