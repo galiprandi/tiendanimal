@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { useTasks } from '../hooks/useTasks'
 import styles from './Header.module.css'
 import { CartIcon } from './icons/Cart.icon'
@@ -8,6 +9,7 @@ import { Logo } from './Logo'
 import { NavBar } from './NavBar'
 
 export const Header = () => {
+  const navigate = useNavigate()
   const { tasks } = useTasks()
 
   return (
@@ -23,10 +25,10 @@ export const Header = () => {
         </div>
         <Logo />
         <div className={styles.right}>
-          <button className="icon accent">
+          <button className="icon accent" onClick={() => navigate('data')}>
             <UserIcon />
           </button>
-          <button className="icon accent">
+          <button className="icon accent" onClick={() => navigate('tasks')}>
             <CartIcon items={tasks?.length} />
           </button>
         </div>
