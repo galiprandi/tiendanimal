@@ -21,9 +21,7 @@ export const defaultNewTask = {
 
 export const getTasks = () =>
   Api.get<TaskFromApiDTO[]>('/todos').then(({ data }) =>
-    data
-      .map(item => ({ ...item, description: defaultNewTask.description }))
-      .slice(0, 3)
+    data.map(item => ({ ...item, description: defaultNewTask.description }))
   )
 
 export const getTask = (id: number) =>

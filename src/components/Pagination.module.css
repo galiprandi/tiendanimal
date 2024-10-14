@@ -1,0 +1,18 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+
+
+    & button {
+        padding: .2em .4em;
+        width: auto;
+        background: 0;
+        color: inherit;
+
+        &.active {
+            background-color: var(--color-accent);
+            color: white;
+        }
+    }
+}

@@ -12,7 +12,7 @@ export const TaskItem = ({ title, description, onEdit, onDelete }: Props) => {
   return (
     <article className={`${styles.card} card`}>
       <div className={styles.content} onClick={onEdit}>
-        <div className={styles.title}>{title}</div>
+        <div className={`${styles.title} ellipsis`}>{title}</div>
         <div className={styles.description}>{limitedDescription}</div>
       </div>
       <aside>

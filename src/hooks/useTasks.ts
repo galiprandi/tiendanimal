@@ -3,6 +3,8 @@ import { getTasks } from '../apis/api'
 import toast from 'react-hot-toast'
 import { useTranslation } from 'react-i18next'
 
+const ITEMS_PER_PAGE = import.meta.env.VITE_ITEMS_PER_PAGE || 3
+
 export const useTasks = () => {
   const { t } = useTranslation('translations')
   const queryKey = ['Tasks']
@@ -19,8 +21,15 @@ export const useTasks = () => {
     },
   })
 
+  const totalPages = tasks ? Math.ceil(tasks.length / ITEMS_PER_PAGE) - 1 : 0
+
+  const getPage = (page = 1) =>
+    tasks?.slice(page * ITEMS_PER_PAGE, (page + 1) * ITEMS_PER_PAGE)
+
   return {
     tasks,
+    getPage,
+    lastPage: totalPages,
     ...rest,
   }
 }
