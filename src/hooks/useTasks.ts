@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 
 const ITEMS_PER_PAGE = import.meta.env.VITE_ITEMS_PER_PAGE || 3
 
-export const useTasks = () => {
+export const useTasks = (query?: string) => {
   const { t } = useTranslation('translations')
   const queryKey = ['Tasks']
 
@@ -21,13 +21,26 @@ export const useTasks = () => {
     },
   })
 
-  const totalPages = tasks ? Math.ceil(tasks.length / ITEMS_PER_PAGE) - 1 : 0
+  // Filter tasks by partial query title
+  const filtered = query
+    ? tasks?.filter(task =>
+        task.title.toLowerCase().includes(query.toLowerCase())
+      )
+    : tasks
 
-  const getPage = (page = 1) =>
-    tasks?.slice(page * ITEMS_PER_PAGE, (page + 1) * ITEMS_PER_PAGE)
+  const totalPages = filtered ? Math.ceil(filtered.length / ITEMS_PER_PAGE) : 0
+
+  const getPage = (page = 1) => {
+    if (page > totalPages) page = 1
+    return filtered?.slice(
+      page * ITEMS_PER_PAGE - ITEMS_PER_PAGE,
+      (page + 1) * ITEMS_PER_PAGE - ITEMS_PER_PAGE
+    )
+  }
 
   return {
     tasks,
+    filtered,
     getPage,
     lastPage: totalPages,
     ...rest,
