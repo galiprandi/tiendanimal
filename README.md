@@ -9,8 +9,9 @@ Check out the live demo: [galiprandi.github.io/tiendanimal/](https://galiprandi.
 ## Features
 
 - View a list of TODOs from the REST API.
-- Add new TODOs.
-- Delete existing TODOs.
+- Optimistic updates for better user experience when creating or deleting a TODO.
+- Add new TODOs with optimistic updates.
+- Delete existing TODOs with optimistic updates.
 - Pagination for better task management.
 - Error handling and form validation.
 
