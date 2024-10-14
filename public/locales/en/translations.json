@@ -1,10 +1,17 @@
 {
     "Add task": "Add task",
+    "Completed": "Completed",
+    "Edit task": "Edit task",
+    "Email": "Email",
+    "Loading...": "Loading...",
     "My best friends": "My best friends",
     "My communications": "My communications",
     "My data": "My data",
     "My feedback": "My feedback",
     "My tasks": "My tasks",
     "Name": "Name",
-    "Save": "Save"
+    "Phone": "Phone",
+    "Save": "Save",
+    "Title": "Title",
+    "Ups! Something went wrong. Please try again later.": "Ups! Something went wrong. Please try again later."
 }

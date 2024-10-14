@@ -1,10 +1,17 @@
 {
     "Add task": "Añadir tarea",
+    "Completed": "Completado",
+    "Edit task": "Editar tarea",
+    "Email": "Correo electrónico",
+    "Loading...": "Cargando...",
     "My best friends": "Mis mejores amigos",
     "My communications": "Mis comunicaciones",
     "My data": "Mis datos",
     "My feedback": "Mis devoluciones",
     "My tasks": "Mis tareas",
     "Name": "Nombre",
-    "Save": "Guardar"
+    "Phone": "Teléfono",
+    "Save": "Guardar",
+    "Title": "Título",
+    "Ups! Something went wrong. Please try again later.": "¡Ups! Algo salió mal. Por favor, inténtelo de nuevo más tarde."
 }
