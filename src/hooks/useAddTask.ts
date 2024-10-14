@@ -1,7 +1,10 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { defaultNewTask, addTask as mutationFn, TaskDTO } from '../apis/api'
+import toast from 'react-hot-toast'
+import { useTranslation } from 'react-i18next'
 
 export const useAddTask = (onAdd?: (data: TaskDTO) => void) => {
+  const { t } = useTranslation('translations')
   const queryClient = useQueryClient()
 
   const { mutate: addNewTask, ...rest } = useMutation({
@@ -25,11 +28,11 @@ export const useAddTask = (onAdd?: (data: TaskDTO) => void) => {
         old?.map(item => (item.id === defaultNewTask.id ? newItem : item))
       )
       const newTask = x?.find(({ id }) => id === data.id)
-      console.log(newTask)
       if (newTask && onAdd) onAdd(newTask)
     },
     onError: (_err, _data, ctx) => {
       if (!ctx) return
+      toast.error(t('Ups! Something went wrong. Please try again later.'))
       const { snapshot, queryKey } = ctx
       if (snapshot) queryClient.setQueryData(queryKey, snapshot)
       queryClient.invalidateQueries({ queryKey })

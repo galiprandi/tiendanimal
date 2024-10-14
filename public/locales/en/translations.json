@@ -12,7 +12,9 @@
     "My tasks": "My tasks",
     "Name": "Name",
     "Phone": "Phone",
+    "Phone number must be at least 6 characters": "Phone number must be at least 6 characters",
     "Save": "Save",
     "Title": "Title",
-    "Ups! Something went wrong. Please try again later.": "Ups! Something went wrong. Please try again later."
+    "Ups! Something went wrong. Please try again later.": "Ups! Something went wrong. Please try again later.",
+    "User created successfully": "User created successfully"
 }

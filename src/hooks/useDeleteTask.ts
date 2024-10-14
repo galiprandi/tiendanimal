@@ -1,7 +1,10 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { deleteTask, TaskDTO } from '../apis/api'
+import toast from 'react-hot-toast'
+import { useTranslation } from 'react-i18next'
 
 export const useDeleteTask = () => {
+  const { t } = useTranslation('translations')
   const queryClient = useQueryClient()
 
   return useMutation({
@@ -16,6 +19,7 @@ export const useDeleteTask = () => {
     },
     onError(_err, _data, ctx) {
       if (!ctx) return
+      toast.error(t('Ups! Something went wrong. Please try again later.'))
       const { snapshot, queryKey } = ctx
       if (snapshot) queryClient.setQueryData(queryKey, snapshot)
     },

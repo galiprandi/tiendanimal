@@ -12,7 +12,9 @@
     "My tasks": "Mis tareas",
     "Name": "Nombre",
     "Phone": "Teléfono",
+    "Phone number must be at least 6 characters": "El número de teléfono debe tener al menos 6 caracteres",
     "Save": "Guardar",
     "Title": "Título",
-    "Ups! Something went wrong. Please try again later.": "¡Ups! Algo salió mal. Por favor, inténtelo de nuevo más tarde."
+    "Ups! Something went wrong. Please try again later.": "¡Ups! Algo salió mal. Por favor, inténtelo de nuevo más tarde.",
+    "User created successfully": "Usuario creado con éxito"
 }

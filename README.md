@@ -12,8 +12,8 @@ Check out the live demo: [galiprandi.github.io/tiendanimal/](https://galiprandi.
 - Optimistic updates for better user experience when creating or deleting a TODO.
 - Add new TODOs with optimistic updates.
 - Delete existing TODOs with optimistic updates.
-- Pagination for better task management.
 - Error handling and form validation.
+- Toast notifications on error messages.
 
 ## Stack
 
