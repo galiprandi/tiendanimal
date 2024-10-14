@@ -6,15 +6,15 @@ import { Outlet } from 'react-router-dom'
 import './AppLayout.css'
 import { Footer } from '../components/Footer'
 
-export const AppLayout = () => {
-  const queryClient = new QueryClient({
-    defaultOptions: {
-      queries: {
-        staleTime: 1000 * 60 * 5, // 5 minutes default cache
-      },
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5, // 5 minutes default cache
     },
-  })
+  },
+})
 
+export const AppLayout = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="container">
