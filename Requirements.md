@@ -33,5 +33,5 @@ You can use any stack you prefer as long as the requirements are met.
 
 ### Resources
 
-- [TODOs Figma]: https://www.figma.com/file/Z8hlp9KjNiRck368uZX89T/prueba-front?type=design&node-id=0%3A1&mode=design&t=aanEL4Bnl1j93JRy-1
-- [TODO API REST Dummy]: https://jsonplaceholder.typicode.com/todos/
+- [TODOs Figma](https://www.figma.com/file/Z8hlp9KjNiRck368uZX89T/prueba-front?type=design&node-id=0%3A1&mode=design&t=aanEL4Bnl1j93JRy-1)
+- [TODO API REST Dummy](https://jsonplaceholder.typicode.com/todos/)

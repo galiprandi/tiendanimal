@@ -63,6 +63,10 @@ The project is built using the following stack:
    npm run test:dev
    ```
 
+## App Requirements
+
+See en this file: [Requirements.md](./Requirements.md)
+
 ## Author
 
 - **Germán Aliprandi**
