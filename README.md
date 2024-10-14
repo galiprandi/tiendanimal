@@ -19,6 +19,7 @@ Check out the live demo: <a href="https://galiprandi.github.io/tiendanimal" targ
 - 🧪 **Unit Testing**: Comprehensive unit tests for components and hooks.
 - 🛠️ **Git Hooks**: Automated tests run before each commit.
 - 🔔 **Notifications**: Toast notifications for error messages.
+- 🌐 **Resilience to Intermittent Connectivity**: The app gracefully handles intermittent network connectivity.
 
 ## Tech Stack
 
